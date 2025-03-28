@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+header {
+  background-color: white;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 16%;
+  border-bottom: 1px solid transparent;
+  transition: all 0.5s ease-in-out;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  font-weight: 500;
+}
+.nav-links a {
+  color: #1d1d1d;
+}
+
+.home {
+  background: #edf0f4 url(assets/home-page2.jpg) no-repeat center center/cover;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-blend-mode: multiply;
+  display: flex;
+  align-items: center;
+  /* justify-content: flex-start; */
+  /* z-index: 1; */
+  opacity: 0.9;
+}
+.home-text h1 {
+  margin: 20px 0;
+  font-weight: 900;
+  /* line-height: 1.1; */
+}
+.home .btn {
+  background-color: #1d1d1d;
+  outline: none;
+  border: none;
+  color: white;
+  font-weight: 700;
+  padding: 13px 30px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.3s ease;
+    text-transform: uppercase;
+}
+.visroment {
+  letter-spacing: 5px;
+}
