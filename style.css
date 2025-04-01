@@ -24,16 +24,25 @@ header {
   border-bottom: 1px solid transparent;
   transition: all 0.5s ease-in-out;
 }
-
-.nav-links {
+header {
+  padding: 10px 30px;
   display: flex;
-  gap: 20px;
   align-items: center;
-  font-weight: 500;
+  justify-content: space-between;
+  background: #ffffff;
+  position: relative;
 }
-.nav-links a {
+header ul {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+header ul li {
+  list-style-type: none;
+}
+header ul li a {
+  text-decoration: none;
   color: #1d1d1d;
-  transition: color 0.3s ease-in-out;
 }
 .nav-links a:hover {
   color: #fe5e00;
@@ -243,4 +252,34 @@ footer {
   background-color: whitesmoke;
 }
 
+.menu-icon {
+  display: none;
+}
+.menu-icon i {
+  color: #1d1d1d;
+  font-size: 30px;
+}
 
+@media (max-width: 600px) {
+  header ul {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    text-align: center;
+    background-color: #d8d8d8;
+    gap: 0;
+    overflow: hidden;
+  }
+  header ul li {
+    padding: 20px;
+    padding-top: 0;
+  }
+  .menu-icon {
+    display: block;
+  }
+  #menuList {
+    transition: all 0.5s;
+  }
+}

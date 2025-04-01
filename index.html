@@ -28,14 +28,17 @@
           alt=""
         />
       </a>
-      <button class="nav-toggler"></button>
-      <ul class="nav-links">
+      
+      <ul id="menuList">
         <li><a href="index.html">Home</a></li>
         <li><a href="shop.html">Shop</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
+      <div class="menu-icon">
+        <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+      </div>
     </header>
     <!-- NAVBAR SECTION END  -->
 
@@ -108,7 +111,7 @@
           <button class="buy-btn">Buy Now</button>
         </div>
       </div>
-    </section>
+    </section> 
 
     <section id="banner">
       <div class="banner-container">
@@ -163,5 +166,7 @@
         </div>
       </footer>
     </div>
+    <script src="https://kit.fontawesome.com/830ca05872.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
   </body>
 </html>
