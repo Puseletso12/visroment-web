@@ -88,9 +88,10 @@ header ul li a.active {
   letter-spacing: 5px;
 }
 
-/* #introduction .introduction-text {
-  float: right;
-} */
+#introduction .introduction-container {
+  padding: 20px;
+  margin: 20px;
+}
 
 #introduction .welcome-container {
   display: flex;
