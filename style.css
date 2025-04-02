@@ -343,4 +343,8 @@ footer {
     display: flex;
     flex-direction: column;
   }
+  #banner {
+    height: 50vh;
+    background-position: center center;
+  }
 }

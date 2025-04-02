@@ -19,3 +19,40 @@ window.onscroll = () => {
   menu.classList.remove("bx-x");
   navbar.classList.remove("active");
 };
+
+const products = {
+  m1: {
+    name: "The Goal Graphic Tee",
+    price: "R450.00",
+    description:
+      "Lightweight and breathable sports cap for all outdoor activities. Adjustable strap for a perfect fit.",
+    mainImage: "./image/m1.png",
+    gallery: [
+      "/./assets/white-tee 4.jpg",
+     
+    ],
+    rating: 3,
+    category: "T-shirts",
+  },
+};
+
+
+
+// Handle product clicks
+document.addEventListener('DOMContentLoaded', function() {
+    // Add click handlers to all product containers
+    const productElements = document.querySelectorAll('.product');
+    productElements.forEach(product => {
+        product.addEventListener('click', function(e) {
+            // Get product ID from image src
+            const imgSrc = this.querySelector('img').src;
+            const productId = imgSrc.split('/').pop().split('.')[0];
+            
+            // Store selected product in localStorage
+            if (products[productId]) {
+                localStorage.setItem('selectedProduct', JSON.stringify(products[productId]));
+                // Redirect to product page
+                window.location.href = 'product.html';
+            }
+        });
+    });
