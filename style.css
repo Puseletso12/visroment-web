@@ -44,9 +44,14 @@ header ul li a {
   text-decoration: none;
   color: #1d1d1d;
 }
-.nav-links a:hover {
+header ul li a:hover,
+header ul li a:focus {
   color: #fe5e00;
   transition: all 0.3s ease-in-out;
+}
+header ul li a.active {
+  color: #fe5e00;
+  font-weight: 700;
 }
 
 .home {
@@ -81,6 +86,28 @@ header ul li a {
 }
 .visroment {
   letter-spacing: 5px;
+}
+
+/* #introduction .introduction-text {
+  float: right;
+} */
+
+#introduction .welcome-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+}
+#introduction img {
+  height: 380px;
+  width: 280px;
+  float: left;
+  margin: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 #new .image-row {
@@ -223,11 +250,6 @@ header ul li a {
   background-color: #ff7f32;
   transition: all 0.3s ease-in-out;
 }
-hr {
-  width: 30px;
-  height: 2px;
-  background-color: #fe5e00;
-}
 
 #banner {
   background-image: url(assets/home-page.jpg);
@@ -244,12 +266,26 @@ hr {
   color: #f8f8f8;
 }
 #banner button {
-  color: #ed7f02;
+  background-color: #ed7f02;
+  outline: none;
+  border: none;
+  color: white;
+  font-weight: 700;
+  padding: 13px 30px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: 0.3s ease;
+  text-transform: uppercase;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-left: 20px;
+}
+#banner button:hover {
+  background-color: rgba(255, 156, 43, 0.4);
+  /* transition: all 0.3s ease-in-out; */
 }
 
 footer {
-  background-color: whitesmoke;
+  background-color: #ffffff;
 }
 
 .menu-icon {
@@ -259,6 +295,17 @@ footer {
   color: #1d1d1d;
   font-size: 30px;
 }
+
+#socials {
+  size: 70;
+  gap: 20px;
+}
+#social:hover {
+  color: #fe5e00;
+  transition: all 0.3s ease-in-out;
+}
+
+
 
 @media (max-width: 600px) {
   header ul {
@@ -281,5 +328,18 @@ footer {
   }
   #menuList {
     transition: all 0.5s;
+  }
+  .home {
+    background-size: cover;
+    height: 80vh;
+  }
+  .home .home-text {
+    padding-left: 30px;
+    padding-top: 70px;
+    font-size: smaller;
+  }
+  #new .image-row {
+    display: flex;
+    flex-direction: column;
   }
 }
