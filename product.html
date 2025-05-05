@@ -66,7 +66,6 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="shop.html">Shop</a></li>
         <li><a href="aboutus.html">About Us</a></li>
-        <li><a href="services.html">Services</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li>
           <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
@@ -81,7 +80,7 @@
     <section class="sproduct my-5 pt-5 container">
         <div class="row">
             <div class="col-lg-5 col-md-12 col-12">
-                <img class="img-fluid w-100 pd-1" src="./image/m10.png" id="mainImg" alt="">
+                <img class="img-fluid w-100 pd-1" src="assets/product9.jpg" id="mainImg" alt="">
 
                 <div class="small-img-group d-flex flex-row">
                     <div class="small-img-col">
@@ -94,13 +93,13 @@
                         <img src="/assets/product9.jpg" width="100%" class="small-img w-100 pd-1" alt="">
                     </div>
                     <div class="small-img-col">
-                        <img src="./image/m10.png" width="100%" class="small-img w-100 pd-1" alt="">
+                        <img src="assets/white tee 3.jpg" width="100%" class="small-img w-100 pd-1" alt="">
                     </div>
                 </div>
             </div>
             <div class="col-lg-6 col-md-12 col-12">
                 <h6>Home / T-Shirts</h6>
-                <h3 class="py-4">The Goal Graphic T-shirts</h3>
+                <h3 class="py-4">The Goal Graphic T-shirt</h3>
                 <h2>R450.00</h2>
                 <select class="my-4">
                     <option>Select Size</option>
@@ -113,7 +112,7 @@
                 <input type="number" value="1">
                 <button class="btn">Add to Cart</button>
                 <h4 class="mt-5 mb-5">Product Details</h4>
-                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore assumenda velit repellat rerum dolor tenetur quam, minima sint similique iusto incidunt sequi molestiae architecto ullam error sunt alias ratione, possimus molestias nam tempore aliquam non. Quis accusantium, saepe, voluptates deserunt et, dolores vitae facilis labore officia ipsam tempore eaque ex.</span>
+                <span>This item is part of Visroment’s exclusive collection, crafted with premium materials for durability, comfort, and standout style. Each piece is designed to embody the spirit of ambition, resilience, and self-expression. Please review your selection carefully before proceeding to checkout.</span>
             </div>
         </div>
 
@@ -166,5 +165,25 @@
       
               
           </div>
+          <script src="index.js"></script>
+          <script>
+document.querySelector(".buy-btn").addEventListener("click", function() {
+  var mainImg = document.getElementById('mainImg');
+  var smallimg = document.getElementsByClassName('small-img');
+
+  smallimg[0].onclick = function(){
+        MainImg.src = smallimg[0].src;
+      }
+      smallimg[1].onclick = function(){
+        MainImg.src = smallimg[1].src;
+      }
+      smallimg[2].onclick = function(){
+        MainImg.src = smallimg[2].src;
+      }
+      smallimg[3].onclick = function(){
+        MainImg.src = smallimg[3].src;
+      }
+})
+          </script>
   </body>
 </html>
