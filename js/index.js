@@ -137,7 +137,7 @@ function loadProductDetails() {
 
   document.querySelector("h3.py-4").textContent = selectedProduct.name;
   document.querySelector("h2").textContent = selectedProduct.price;
-  document.querySelector("span").textContent = selectedProduct.description;
+  // document.querySelector("span").textContent = selectedProduct.description;
   document.querySelector(
     "h6"
   ).textContent = `Home / ${selectedProduct.category}`;
