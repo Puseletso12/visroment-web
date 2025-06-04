@@ -1,13 +1,4 @@
 const products = {
-  p1: {
-    name: '"The Goal" Tee',
-    price: "R450.00",
-    description:
-      "This item is part of Visroment’s exclusive collection, crafted with premium materials for durability, comfort, and standout style. Each piece is designed to embody the spirit of ambition, resilience, and self-expression. Please review your selection carefully before proceeding to checkout.",
-    mainImage: "./image/product/p1.jpg",
-    rating: 4,
-    category: "T-shirts",
-  },
   p2: {
     name: '"The Goal" Tee',
     price: "R450.00",
@@ -40,15 +31,26 @@ const products = {
     mainImage: "./image/product/p5.jpg",
     category: "T-shirts",
   },
+  p11: {
+    name: '"The Goal" Tee',
+    price: "R450.00",
+    description:
+      "This item is part of Visroment’s exclusive collection, crafted with premium materials for durability, comfort, and standout style. Each piece is designed to embody the spirit of ambition, resilience, and self-expression. Please review your selection carefully before proceeding to checkout.",
+    mainImage: "./image/product/p11.jpg",
+    gallery: [],
+    category: "T-shirts",
+    rating: 4,
+  },
   p87: {
     name: '"The Goal" Tee',
     price: "R450.00",
     description:
       "This item is part of Visroment’s exclusive collection, crafted with premium materials for durability, comfort, and standout style. Each piece is designed to embody the spirit of ambition, resilience, and self-expression. Please review your selection carefully before proceeding to checkout.",
     mainImage: "./image/product/p87.jpg",
+    gallery: [],
     category: "T-shirts",
     rating: 4,
-  }
+  },
 };
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -171,7 +173,7 @@ function updateCartCounter() {
                 position: absolute; 
                 top: -8px; 
                 right: -8px; 
-                background-color: #a18e7f; 
+                background-color: #03346f; 
                 color: white; 
                 border-radius: 50%; 
                 padding: 2px 6px; 
