@@ -34,7 +34,7 @@
             outline: none;
         }
         .btn{
-            background-color: #a18e7f;
+            background-color: #03346f;
             opacity: 1;
             transition: 0.3s ease;
         }
@@ -45,33 +45,50 @@
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light py-3 fixed-top" >
-    <div class="container">
-      <img id="logo" src="image/log1.jpg" alt="">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <i  id="bar" class="fa-solid fa-bars"></i>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light py-3 fixed-top">
+  <div class="container">
+
+    <a href="index.html">
+      <img id="logo" src="image/log1.jpg" alt="Visroment Logo">
+    </a>
+
+
+    <div class="d-flex align-items-center order-lg-2 gap-3">
+      <a href="cart.html" class="nav-link position-relative">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span id="cart-count" class="position-absolute top-0 start-100 translate-middle "></span>
+      </a>
+
+      
+      <a href="signup.html" class="nav-link">
+        <i class="fa-solid fa-user"></i>
+      </a>
+
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i id="bar" class="fa-solid fa-bars"></i></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-        
-          <li class="nav-item">
-            <a class="nav-link " href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="shop.html">Shop</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="About_us.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Contact_us.html">Contact us</a>
-          </li>
-          <li class="nav-item">
-            <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
-          </li>
-      </div>
     </div>
-  </nav>
+
+    <div class="collapse navbar-collapse order-lg-1" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="shop.html">Shop</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="About_us.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Contact_us.html">Contact us</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
     <section class="sproduct my-5 pt-5 container">
         <div class="row">
