@@ -539,4 +539,14 @@ footer .copyright a:hover {
     height: 100vh;
     padding-top: 180px;
   }
+  .navbar .fa-user,
+  .navbar .fa-cart-shopping {
+    font-size: 18px;
+    margin-left: 20px;
+    color: black;
+  }
+
+  #cart-count {
+    font-size: 0.6rem;
+  }
 }
