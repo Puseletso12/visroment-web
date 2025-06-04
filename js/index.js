@@ -31,12 +31,62 @@ const products = {
     mainImage: "./image/product/p5.jpg",
     category: "T-shirts",
   },
+  p7: {
+    name: '"The Goal" Tee',
+    price: "R450.00",
+    description:
+      "This item is part of Visroment’s exclusive collection, crafted with premium materials for durability, comfort, and standout style. Each piece is designed to embody the spirit of ambition, resilience, and self-expression. Please review your selection carefully before proceeding to checkout.",
+    mainImage: "./image/product/p7.jpg",
+    gallery: [],
+    category: "T-shirts",
+    rating: 4,
+  },
+  p10: {
+    name: '"The Goal" Tee',
+    price: "R450.00",
+    description:
+      "This item is part of Visroment’s exclusive collection, crafted with premium materials for durability, comfort, and standout style. Each piece is designed to embody the spirit of ambition, resilience, and self-expression. Please review your selection carefully before proceeding to checkout.",
+    mainImage: "./image/product/p10.jpg",
+    gallery: [],
+    category: "T-shirts",
+    rating: 4,
+  },
   p11: {
     name: '"The Goal" Tee',
     price: "R450.00",
     description:
       "This item is part of Visroment’s exclusive collection, crafted with premium materials for durability, comfort, and standout style. Each piece is designed to embody the spirit of ambition, resilience, and self-expression. Please review your selection carefully before proceeding to checkout.",
     mainImage: "./image/product/p11.jpg",
+    gallery: [],
+    category: "T-shirts",
+    rating: 4,
+  },
+  p25: {
+    name: '"The Goal" Tee',
+    price: "R450.00",
+    description:
+      "This item is part of Visroment’s exclusive collection, crafted with premium materials for durability, comfort, and standout style. Each piece is designed to embody the spirit of ambition, resilience, and self-expression. Please review your selection carefully before proceeding to checkout.",
+    mainImage: "./image/product/p25.jpg",
+    gallery: [],
+    category: "T-shirts",
+    rating: 4,
+  },
+  p79: {
+    name: '"The Goal" Tee',
+    price: "R450.00",
+    description:
+      "This item is part of Visroment’s exclusive collection, crafted with premium materials for durability, comfort, and standout style. Each piece is designed to embody the spirit of ambition, resilience, and self-expression. Please review your selection carefully before proceeding to checkout.",
+    mainImage: "./image/product/p79.jpg",
+    gallery: [],
+    category: "T-shirts",
+    rating: 4,
+  },
+  p82: {
+    name: '"The Goal" Tee',
+    price: "R450.00",
+    description:
+      "This item is part of Visroment’s exclusive collection, crafted with premium materials for durability, comfort, and standout style. Each piece is designed to embody the spirit of ambition, resilience, and self-expression. Please review your selection carefully before proceeding to checkout.",
+    mainImage: "./image/product/p82.jpg",
     gallery: [],
     category: "T-shirts",
     rating: 4,
