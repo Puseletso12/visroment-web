@@ -85,6 +85,13 @@ button:hover {
   height: 70px;
   transition: all 0.4s ease;
 }
+#mainNavbar .nav-link,
+#mainNavbar .navbar-nav .nav-link,
+#mainNavbar .fa-solid,
+#mainNavbar .navbar-nav a {
+  color: #ffffff !important;
+  transition: color 0.4s ease, opacity 0.3s ease;
+}
 
 /* Scrolled = Black solid navbar */
 #mainNavbar.scrolled {
