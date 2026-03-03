@@ -71,46 +71,38 @@
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light py-3 fixed-top">
+    <!-- ── NAVBAR (your existing Bootstrap navbar, unchanged) ── -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light py-3 fixed-top" id="mainNavbar">
   <div class="container">
-
     <a href="index.html">
       <img id="logo" src="image/log1.jpg" alt="Visroment Logo">
     </a>
 
-
     <div class="d-flex align-items-center order-lg-2 gap-3">
       <a href="cart.html" class="nav-link position-relative">
         <i class="fa-solid fa-cart-shopping"></i>
-        <span id="cart-count" class="position-absolute top-0 start-100 translate-middle "></span>
+        <span id="cart-count" class="position-absolute top-0 start-100 translate-middle"></span>
       </a>
-
-      
       <a href="signup.html" class="nav-link">
         <i class="fa-solid fa-user"></i>
       </a>
-
-      
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <!-- Bootstrap toggler — works out of the box, no custom JS needed -->
+      <button class="navbar-toggler" type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
         <span><i id="bar" class="fa-solid fa-bars"></i></span>
       </button>
     </div>
 
     <div class="collapse navbar-collapse order-lg-1" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="shop.html">Shop</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="About_us.html">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="Contact_us.html">Contact us</a>
-        </li>
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+        <li class="nav-item"><a class="nav-link" href="About_us.html">About</a></li>
+        <li class="nav-item"><a class="nav-link active" href="Contact_us.html">Contact us</a></li>
       </ul>
     </div>
   </div>
@@ -120,13 +112,15 @@
             <div class="col-md-6">
                 <h1>About Our Brand</h1>
                 <hr class="mx-auto">
-                <p><strong>"Visroment"</strong>  emphasizes the importance of quality, attention to detail and self-expression. 
-                  This is a motivational brand, a brand that focuses on the importance of gratefulness; There is always 
-                  something to be grateful for, there is always something to life! 
-                  It symbolizes a collective identity for those who connect through things such as music, drama and art</p>
+                <p><strong>"Visroment"</strong>  is inspired by the relentless pursuit of becoming the 
+                  mindset that growth is a lifelong evolution, not a destination. At its 
+                  core, the brand is built for creatives who see self-expression as 
+                  power and personal development as a responsibility. It draws from 
+                  the energy of those who refuse to blend in, who embrace their individuality, and who wear 
+                  their ambition as a badge of honor.</p>
             </div>
             <div class="col-md-6 text-center">
-                <img loading="lazy" src="./image/adds/A7.jpg" alt="About Us" class="img-fluid">
+                <img loading="lazy" src="./image/log1.jpg" alt="About Us" class="img-fluid">
             </div>
         </div>
     </section>
@@ -134,20 +128,24 @@
     <section class="container my-5 py-5 mid">
         <div class="row align-items-center" id="mid_2">
             <div class="col-md-6">
-                <h2>Goal</h2>
-                <hr class="mx-auto">
-                <p>At Visroment, our vision is to become more than just a clothing brand. 
-                  We aim to be a lifestyle movement that inspires individuals to rise above 
-                  limitations and wear their ambition with pride. We believe in the power of 
-                  self-expression, resilience, and growth, and we channel these values into every 
-                  design we create. Our goal is to empower the hustlers, the dreamers, and the go-getters 
-                  to step into their greatness and make their mark on the world — one outfit at a time.</p><br>
+                
                 <h2 class="mt-4">Inspiration</h2>
                 <hr class="mx-auto">
-                <p>Visroment is inspired by the resilience found in everyday hustlers and the bold stories of those who rise against the odds. From the relentless energy of cultural icons like John Wick, Marvel heroes, and 50 Cent, to the raw ambition of real-world go-getters, Visroment draws from narratives that celebrate power, discipline, and transformation. <br> </p>
+                <p>The spirit of VISROMENT is shaped by the hustle mentality. It finds 
+                  beauty in the grind and meaning in the struggle. Every challenge 
+                  is viewed as refinement; every obstacle, an opportunity to rise stronger.
+                  Quality is non-negotiable. Just as our audience strives for excellence 
+                  in their craft, mindset, and lifestyle, VISROMENT is inspired by precision, 
+                  intention, and durability, creating pieces that reflect the discipline 
+                  and depth of the people who wear them. <br><br>
+                   <h2>We are VISROMENT</h2>  </p>
+                   <hr class="mx-auto">
+                   <!-- <h2>Goal</h2> 
+                <hr class="mx-auto"> -->
+                <p></p><br>
             </div>
             <div class="col-md-6 text-center">
-                <img loading="lazy" src="./image/adds/A5.jpg" alt="">
+                <img loading="lazy" src="./image/retouch_2025071501122953.jpg" alt="">
             </div>
         </div>
     </section>
