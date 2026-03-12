@@ -10,6 +10,19 @@
     <link href="https://fonts.cdnfonts.com/css/dreadnoughtus" rel="stylesheet">
     <title>About Us</title>
     <style>
+      /* ── Scroll-reveal ── */
+      .reveal {
+        opacity: 0;
+        transform: translateY(36px);
+        transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                    transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+      .reveal.visible { opacity: 1; transform: translateY(0); }
+      .reveal[data-delay="100"] { transition-delay: 0.1s; }
+      .reveal[data-delay="200"] { transition-delay: 0.2s; }
+      .reveal[data-delay="300"] { transition-delay: 0.3s; }
+      .reveal[data-delay="400"] { transition-delay: 0.4s; }
+      .reveal[data-delay="500"] { transition-delay: 0.5s; }
         .about-section {
             padding: 50px 20px;
 
@@ -113,7 +126,7 @@
             <div class="col-md-6">
                 <h1 style="font-family: 'Dreadnoughtus', sans-serif;">About Our Brand </h1>
                 <hr class="mx-auto">
-                <p style="font-family: 'Helvetica', 'Arial', sans-serif;"><strong>"Visroment"</strong>  is inspired by the relentless pursuit of becoming the 
+                <p   style="font-family: 'Helvetica', 'Arial', sans-serif;"><strong>"Visroment"</strong>  is inspired by the relentless pursuit of becoming the 
                   mindset that growth is a lifelong evolution, not a destination. At its 
                   core, the brand is built for creatives who see self-expression as 
                   power and personal development as a responsibility. It draws from 
@@ -194,22 +207,20 @@
         <div class="col mb-3">
           <h5>Quick Links</h5>
           <ul class="nav flex-column" id="quicklinks">
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+            <li class="nav-item mb-2"><a href="index.html" class="nav-link p-0 text-body-secondary">Home</a></li>
             <li class="nav-item mb-2"><a href="shop.html" class="nav-link p-0 text-body-secondary">Shop</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About Us</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Enquiry</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Contact Us</a></li>
+            <li class="nav-item mb-2"><a href="About_us.html" class="nav-link p-0 text-body-secondary">About Us</a></li>
+            <li class="nav-item mb-2"><a href="Contact_us.html" class="nav-link p-0 text-body-secondary">Contact Us</a></li>
           </ul>
         </div>
         
         <div class="col mb-3">
           <h5>Section</h5>
           <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Introduction</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+            <li class="nav-item mb-2"><a href="index.html" class="nav-link p-0 text-body-secondary">Home</a></li>
+            <li class="nav-item mb-2"><a href="shop.html" class="nav-link p-0 text-body-secondary">Features</a></li>
+            <li class="nav-item mb-2"><a href="Contact_us.html" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+            <li class="nav-item mb-2"><a href="About_us.html" class="nav-link p-0 text-body-secondary">About</a></li>
           </ul>
         </div>
     

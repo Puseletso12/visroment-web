@@ -41,6 +41,16 @@ const products = {
     category: "T-shirts",
     rating: 4,
   },
+  p8: {
+    name: '"The Double Brown" Boxy Tee',
+    price: "R450.00",
+    description:
+      "This item is part of Visroment’s exclusive collection, crafted with premium materials for durability, comfort, and standout style. Each piece is designed to embody the spirit of ambition, resilience, and self-expression. Please review your selection carefully before proceeding to checkout.",
+    mainImage: "./image/product/p8.jpeg",
+    gallery: [],
+    category: "T-shirts",
+    rating: 4,
+  },
   p10: {
     name: '"The Goal" Tee',
     price: "R450.00",
@@ -57,6 +67,16 @@ const products = {
     description:
       "This item is part of Visroment’s exclusive collection, crafted with premium materials for durability, comfort, and standout style. Each piece is designed to embody the spirit of ambition, resilience, and self-expression. Please review your selection carefully before proceeding to checkout.",
     mainImage: "./image/product/p11.jpg",
+    gallery: [],
+    category: "T-shirts",
+    rating: 4,
+  },
+   p12: {
+    name: '"Someone Who Loves Me" Tee',
+    price: "R450.00",
+    description:
+      "This item is part of Visroment’s exclusive collection, crafted with premium materials for durability, comfort, and standout style. Each piece is designed to embody the spirit of ambition, resilience, and self-expression. Please review your selection carefully before proceeding to checkout.",
+    mainImage: "./image/product/p12.jpg",
     gallery: [],
     category: "T-shirts",
     rating: 4,
@@ -117,6 +137,34 @@ document.addEventListener("DOMContentLoaded", function () {
   // Your other code (products, cart, etc.) stays here...
   updateCartCounter();
 });
+
+ const toggler = document.querySelector(".navbar-toggler");
+  const menu = document.getElementById("navbarSupportedContent");
+
+  if (toggler && menu) {
+    toggler.removeAttribute("data-bs-toggle"); // take full control
+
+    toggler.addEventListener("click", function (e) {
+      e.stopPropagation();
+      const isOpen = menu.classList.contains("show");
+      menu.classList.toggle("show", !isOpen);
+      toggler.setAttribute("aria-expanded", String(!isOpen));
+    });
+
+    menu.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        menu.classList.remove("show");
+        toggler.setAttribute("aria-expanded", "false");
+      });
+    });
+
+    document.addEventListener("click", function (e) {
+      if (navbar && !navbar.contains(e.target)) {
+        menu.classList.remove("show");
+        toggler.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
 
 document.addEventListener("DOMContentLoaded", function () {
   const productElements = document.querySelectorAll(".product");
