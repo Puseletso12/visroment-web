@@ -90,6 +90,7 @@ button:hover {
 #mainNavbar .fa-solid,
 #mainNavbar .navbar-nav a {
   color: #ffffff !important;
+  /* color: #030000 !important; */
   transition: color 0.4s ease, opacity 0.3s ease;
 }
 
@@ -100,9 +101,11 @@ button:hover {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
+
 /* Logo smaller when scrolled */
 #mainNavbar.scrolled #logo {
   height: 50px;
+  filter: invert(1);
 }
 
 /* Text becomes white when scrolled */
