@@ -398,7 +398,7 @@ hr {
 }
 
 .product .buy-btn {
-  background: #03346f;
+  background: #fe5e00;
   transform: translateY(20px);
   opacity: 0;
   transition: 0.3s all;
@@ -441,12 +441,12 @@ hr {
 }
 
 #banner button {
-  background-color: #03346f;
+  background-color: #fe5e00;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 #newbanner button {
-  background-color: #03346f;
+  background-color: #fe5e00;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -620,7 +620,7 @@ footer .copyright a:hover {
 @media screen and (max-width: 991px) {
   body > nav > div > button:hover,
   body > nav > div > button:focus {
-    background-color: #03346f;
+    background-color: #fe5e00;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 
@@ -712,13 +712,66 @@ footer .copyright a:hover {
 .reveal[data-delay="500"] { transition-delay: 0.5s; }
 
 
+/* ==========================================
+   PRODUCT DETAILS - IMAGE GALLERY
+   ========================================== */
 
+/* Main product image */
+#mainImg {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 4px;
+}
 
+/* Thumbnail container */
+.product-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+  width: 100%;
+  justify-content: flex-start;
+}
 
+/* Individual thumbnail images */
+.product-gallery .small-img {
+  width: 85px;
+  height: 100px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  transition: border-color 0.2s ease, opacity 0.2s ease;
+}
 
+/* Hover effect */
+.product-gallery .small-img:hover {
+  opacity: 0.8;
+}
 
+/* Currently selected image */
+.product-gallery .small-img.active {
+  border-color: #a18e7f;
+}
 
+/* Keyboard focus */
+.product-gallery .small-img:focus-visible {
+  outline: 2px solid #a18e7f;
+  outline-offset: 2px;
+}
 
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .product-gallery {
+    gap: 8px;
+  }
 
-
-
+  .product-gallery .small-img {
+    width: 70px;
+    height: 85px;
+  }
+}

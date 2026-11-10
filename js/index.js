@@ -5,6 +5,7 @@ const products = {
     description:
       "This item is part of Visroment’s exclusive collection, crafted with premium materials for durability, comfort, and standout style. Each piece is designed to embody the spirit of ambition, resilience, and self-expression. Please review your selection carefully before proceeding to checkout.",
     mainImage: "./image/product/p2.jpg",
+    
     category: "T-shirts",
   },
   p3: {
@@ -47,9 +48,8 @@ const products = {
     description:
       "This item is part of Visroment’s exclusive collection, crafted with premium materials for durability, comfort, and standout style. Each piece is designed to embody the spirit of ambition, resilience, and self-expression. Please review your selection carefully before proceeding to checkout.",
     mainImage: "./image/product/p8.jpeg",
-    gallery: [],
     category: "T-shirts",
-    rating: 4,
+    gallery: ['./image/product/p8.jpeg', './image/product/p8(back).jpeg'],
   },
   p10: {
     name: '"The Goal" Tee',
@@ -67,7 +67,7 @@ const products = {
     description:
       "This item is part of Visroment’s exclusive collection, crafted with premium materials for durability, comfort, and standout style. Each piece is designed to embody the spirit of ambition, resilience, and self-expression. Please review your selection carefully before proceeding to checkout.",
     mainImage: "./image/product/p11.jpg",
-    gallery: [],
+    gallery: ["./image/product/p11.jpg", "./image/product/p82.jpg", './image/product/p9.jpg'],
     category: "T-shirts",
     rating: 4,
   },
@@ -80,6 +80,34 @@ const products = {
     gallery: [],
     category: "T-shirts",
     rating: 4,
+  },
+  p14: {
+    name: '"Sign Language" Tee',
+    price: "R350.00",
+    description:
+      "This item is part of Visroment’s exclusive collection, crafted with premium materials for durability, comfort, and standout style. Each piece is designed to embody the spirit of ambition, resilience, and self-expression. Please review your selection carefully before proceeding to checkout.",
+    mainImage: "./image/product/p14.jpg",
+    gallery: ["./image/product/p14.jpg", "./image/product/p14(2).jpg", "./image/product/p14(3).jpg"],
+    category: "T-shirts",
+    rating: 4,
+  },
+  p15: {
+    name: '"Sign Language" Tee',
+    price: "R350.00",
+    description:
+      "This item is part of Visroment’s exclusive collection, crafted with premium materials for durability, comfort, and standout style. Each piece is designed to embody the spirit of ambition, resilience, and self-expression. Please review your selection carefully before proceeding to checkout.",
+    mainImage: "./image/product/p15.jpg",
+    gallery: ["./image/product/p15.jpg", "./image/product/p15(2).jpg"],
+    category: "T-shirts",
+  },
+  p19: {
+    name: '"Property of Visroment" Tee',
+    price: "R530.00",
+    description:
+      "This item is part of Visroment’s exclusive collection, crafted with premium materials for durability, comfort, and standout style. Each piece is designed to embody the spirit of ambition, resilience, and self-expression. Please review your selection carefully before proceeding to checkout.",
+    mainImage: "./image/product/p19.jpg",
+    gallery: ["./image/product/p19.jpg", "./image/product/p19(1).jpg", "./image/product/p19(2).jpg"],
+    category: "T-shirts",
   },
   p25: {
     name: '"The Goal" Tee',
@@ -190,37 +218,131 @@ document.addEventListener("DOMContentLoaded", function () {
   updateCartCounter();
 });
 
+// function loadProductDetails() {
+//   const selectedProduct = JSON.parse(localStorage.getItem("selectedProduct"));
+
+//   if (!selectedProduct) return;
+
+//   const mainImg = document.getElementById("mainImg");
+//   if (mainImg) mainImg.src = selectedProduct.mainImage;
+
+//   document.querySelector("h3.py-4").textContent = selectedProduct.name;
+//   document.querySelector("h2").textContent = selectedProduct.price;
+//   document.querySelector(
+//     "h6"
+//   ).textContent = `Home / ${selectedProduct.category}`;
+
+//   const smallImgs = document.querySelectorAll(".small-img");
+//   selectedProduct.gallery.forEach((img, index) => {
+//     if (smallImgs[index]) {
+//       smallImgs[index].src = img;
+//     }
+//   });
+
+//   const stars = document.querySelectorAll(".star i");
+//   stars.forEach((star, index) => {
+//     if (index < selectedProduct.rating) {
+//       star.className = "fa-solid fa-star";
+//     } else {
+//       star.className = "fa-regular fa-star";
+//     }
+//   });
+// }
+
+
 function loadProductDetails() {
-  const selectedProduct = JSON.parse(localStorage.getItem("selectedProduct"));
+  const selectedProduct = JSON.parse(
+    localStorage.getItem("selectedProduct")
+  );
 
   if (!selectedProduct) return;
 
   const mainImg = document.getElementById("mainImg");
-  if (mainImg) mainImg.src = selectedProduct.mainImage;
 
-  document.querySelector("h3.py-4").textContent = selectedProduct.name;
-  document.querySelector("h2").textContent = selectedProduct.price;
-  // document.querySelector("span").textContent = selectedProduct.description;
-  document.querySelector(
-    "h6"
-  ).textContent = `Home / ${selectedProduct.category}`;
+  if (!mainImg) return;
 
-  const smallImgs = document.querySelectorAll(".small-img");
-  selectedProduct.gallery.forEach((img, index) => {
-    if (smallImgs[index]) {
-      smallImgs[index].src = img;
+  mainImg.src = selectedProduct.mainImage;
+  mainImg.alt = selectedProduct.name;
+
+  // Update product information
+  const nameElement = document.querySelector("h3.py-4");
+  const priceElement = document.querySelector("h2");
+  const categoryElement = document.querySelector("h6");
+
+  if (nameElement) nameElement.textContent = selectedProduct.name;
+  if (priceElement) priceElement.textContent = selectedProduct.price;
+  if (categoryElement) {
+    categoryElement.textContent = `Home / ${selectedProduct.category}`;
+  }
+
+  // Create a gallery container beneath the main image
+  let galleryContainer = document.getElementById("productGallery");
+
+  if (!galleryContainer) {
+    galleryContainer = document.createElement("div");
+    galleryContainer.id = "productGallery";
+    galleryContainer.className = "product-gallery";
+
+    mainImg.insertAdjacentElement("afterend", galleryContainer);
+  }
+
+  galleryContainer.innerHTML = "";
+
+  // Include the main image and any additional gallery images
+  const images = [
+    ...new Set([
+      selectedProduct.mainImage,
+      ...(selectedProduct.gallery || [])
+    ])
+  ].filter(Boolean);
+
+  images.forEach((imageSrc, index) => {
+    const thumbnail = document.createElement("img");
+
+    thumbnail.src = imageSrc;
+    thumbnail.alt = `${selectedProduct.name} view ${index + 1}`;
+    thumbnail.className = "small-img";
+    thumbnail.tabIndex = 0;
+    thumbnail.setAttribute("role", "button");
+
+    if (index === 0) {
+      thumbnail.classList.add("active");
     }
+
+    function selectImage() {
+      mainImg.src = imageSrc;
+
+      galleryContainer.querySelectorAll(".small-img")
+        .forEach(img => img.classList.remove("active"));
+
+      thumbnail.classList.add("active");
+    }
+
+    thumbnail.addEventListener("click", selectImage);
+
+    thumbnail.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        selectImage();
+      }
+    });
+
+    galleryContainer.appendChild(thumbnail);
   });
 
+  // Update product rating if available
   const stars = document.querySelectorAll(".star i");
-  stars.forEach((star, index) => {
-    if (index < selectedProduct.rating) {
-      star.className = "fa-solid fa-star";
-    } else {
-      star.className = "fa-regular fa-star";
-    }
-  });
+
+  if (typeof selectedProduct.rating === "number") {
+    stars.forEach((star, index) => {
+      star.className = index < selectedProduct.rating
+        ? "fa-solid fa-star"
+        : "fa-regular fa-star";
+    });
+  }
 }
+
+
 document.addEventListener("DOMContentLoaded", function () {
   const MainImg = document.getElementById("mainImg");
   const smallImgs = document.getElementsByClassName("small-img");
