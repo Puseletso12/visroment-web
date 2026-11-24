@@ -152,17 +152,6 @@ const products = {
 };
 
 document.addEventListener("DOMContentLoaded", function () {
-  const navbar = document.getElementById("mainNavbar");
-
-  window.addEventListener("scroll", function () {
-    if (window.scrollY > 100) {
-      navbar.classList.add("scrolled");
-    } else {
-      navbar.classList.remove("scrolled");
-    }
-  });
-
-  // Your other code (products, cart, etc.) stays here...
   updateCartCounter();
 });
 
@@ -448,42 +437,6 @@ function addToCart(product, size, quantity) {
   localStorage.setItem("cartItems", JSON.stringify(cartItems));
   updateCartCounter();
 }
-
-
-
-
-  // <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  //   // ── FIX 1: Nav scroll effect ──────────────────────────────
-    const nav = document.getElementById('mainNav');
-
-    function updateNav() {
-      if (window.scrollY > 40) {
-        nav.classList.add('nav--scrolled');
-      } else {
-        nav.classList.remove('nav--scrolled');
-      }
-    }
-    window.addEventListener('scroll', updateNav, { passive: true });
-    updateNav(); // run once on load
-
-
-    // ── FIX 2: Mobile menu toggle + close on outside click ────
-    const burger = document.getElementById('burger');
-    const navLinks = document.getElementById('navLinks');
-
-    burger.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const isOpen = navLinks.classList.toggle('open');
-      burger.classList.toggle('open', isOpen);
-    });
-
-    // Close when a nav link is clicked
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('open');
-        burger.classList.remove('open');
-      });
-    });
 
     // Close when clicking anywhere outside the nav
     document.addEventListener('click', (e) => {
