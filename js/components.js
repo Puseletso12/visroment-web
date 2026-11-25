@@ -107,3 +107,105 @@ function initialiseNavbar() {
 }
 
 loadNavbar();
+
+/* =========================
+   SHARED FOOTER
+========================= */
+
+function loadFooter() {
+  const container = document.getElementById("site-footer");
+
+  if (!container) return;
+
+  container.innerHTML = `
+    <footer class="vis-footer">
+
+      <div class="vis-footer-container">
+
+        <div class="vis-footer-brand">
+          <a href="index.html">
+            <img src="./image/adds/WHITE LOGO.png"
+                 alt="VISROMENT">
+          </a>
+        </div>
+
+        <div class="vis-footer-column">
+          <h5>Explore</h5>
+
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="About_us.html">About Us</a></li>
+            <li><a href="Contact_us.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="vis-footer-column">
+          <h5>Customer Care</h5>
+
+          <ul>
+            <li><a href="policy.html">Ordering & Payment</a></li>
+            <li><a href="policy.html">Delivery & Returns</a></li>
+            <li><a href="Contact_us.html">Get in Touch</a></li>
+          </ul>
+        </div>
+
+        <div class="vis-footer-column">
+          <h5>Follow Us</h5>
+
+          <div class="vis-footer-socials">
+
+            <a href="https://www.instagram.com/visroment"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="https://www.tiktok.com/@visroment7"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="TikTok">
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+
+            <a href="https://wa.me/27607494949"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="WhatsApp">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+
+            <a href="mailto:visroment48@gmail.com"
+               aria-label="Email">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+
+          </div>
+        </div>
+
+      </div>
+
+      <div class="vis-footer-bottom">
+
+        <p>
+          &copy; ${new Date().getFullYear()} VISROMENT.
+          All rights reserved.
+        </p>
+
+        <p>
+          Developed by
+          <a href="https://www.linkedin.com/in/puseletso-chuene-0840b8278/"
+             target="_blank"
+             rel="noopener noreferrer">
+            Puseletso Chuene
+          </a>
+        </p>
+
+      </div>
+
+    </footer>
+  `;
+}
+
+loadFooter();
